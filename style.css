@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* фон страницы - линейный градиент, содержимое по центру окна */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #4b6cb7 0%, #8e54e9 50%, #f0679a 100%);
+}
+
+.counter {
+    width: 320px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.counter__title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* окошко результата; цвет фона задаётся классами из script.js */
+.counter__result {
+    width: 160px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #222222;
+    border-radius: 12px;
+    transition: background-color 0.25s;
+}
+
+.counter__result--positive {
+    background-color: #ffd600; /* жёлтый */
+}
+
+.counter__result--negative {
+    background-color: #43a047; /* зелёный */
+    color: #ffffff;
+}
+
+.counter__result--zero {
+    background-color: #e53935; /* красный */
+    color: #ffffff;
+}
+
+.counter__buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* кнопки: скругление 5 px и градиентный фон */
+.counter__button {
+    width: 110px;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #ff9a44 0%, #fc6076 100%);
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.counter__button:hover {
+    background: linear-gradient(180deg, #ffad66 0%, #fd7a8c 100%);
+}
+
+.counter__button:active {
+    transform: scale(0.96);
+}
+
+.counter__button:disabled {
+    background: linear-gradient(180deg, #b0b0b0 0%, #8a8a8a 100%);
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* окно сообщения под кнопками */
+.counter__message {
+    width: 100%;
+    min-height: 64px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}

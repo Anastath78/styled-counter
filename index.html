@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счётчик</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="counter">
+        <h1 class="counter__title">Счётчик</h1>
+
+        <!-- окошко отображения результата -->
+        <div id="result" class="counter__result counter__result--zero" aria-live="polite">0</div>
+
+        <div class="counter__buttons">
+            <button id="minus" class="counter__button" type="button">Минус</button>
+            <button id="plus" class="counter__button" type="button">Плюс</button>
+        </div>
+
+        <!-- окно для сообщения о предельном значении -->
+        <div id="message" class="counter__message" aria-live="polite"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
